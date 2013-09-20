@@ -42,9 +42,13 @@
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ocean.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Icon.png" />
+    <None Include="Content\water.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />

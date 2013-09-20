@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Input;
+
 #endregion
 
 namespace s1945
@@ -13,18 +14,22 @@ namespace s1945
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
+		Ocean ocean;
 
 		public Game1 ()
 		{
 			graphics = new GraphicsDeviceManager (this);
 			Content.RootDirectory = "Content";	            
-			graphics.IsFullScreen = false;		
+			graphics.IsFullScreen = false;
 		}
 
 		protected override void Initialize ()
 		{
 			base.Initialize ();
-				
+
+			ocean = new Ocean (this);
+
+			Components.Add (ocean);
 		}
 
 		protected override void LoadContent ()
